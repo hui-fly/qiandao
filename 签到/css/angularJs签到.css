@@ -1,0 +1,154 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+.container{
+	z-index: 0;
+}
+
+.headImgContainer {}
+
+.headImg {
+
+    display: block;
+    width: 100%;
+}
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background-color: #faca34;
+}
+
+.title {
+    text-align: center;
+    margin: 0 25px;
+    font-size: 22px;
+}
+
+.title button {
+    line-height: 40px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: #faca34;
+}
+
+.pre {
+    float: left;
+}
+
+.now {
+    display: inline;
+    line-height: 40px;
+}
+
+.next {
+    float: right;
+}
+
+.calendar {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.signedCalendarCell {
+    display: inline-block;
+    font-size: 22px;
+    width: 48px;
+    height: 40px;
+    line-height: 45px;
+    border: 0.5px solid #faca34;
+    background-color: #58bc8d;
+    font-weight: border;
+    border-radius: 5px;
+}
+
+.CalendarCell {
+    display: inline-block;
+    font-size: 22px;
+    width: 48px;
+    height: 40px;
+    line-height: 45px;
+    border: 0.5px solid #faca34;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.btnContainer {
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+}
+
+.btn {
+    color: #fff;
+    width: 110px;
+    height: 50px;
+    border: 5px solid #faca34;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    background-color: #58bc8d;
+}
+.bg{
+	position: absolute;
+	top:0;
+	display: none;
+	left: 0;
+	z-index: 80;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+}
+.sign { 
+    position: absolute;
+	width: 100%;
+	z-index:100;
+	top: 180px;
+}
+
+.succ{
+	width: 220px;
+	margin: 0 auto;
+	border: 3px solid #58bc8d;
+	border-radius: 5px;
+	background-color: #fff;
+}
+.success{
+	margin-top: 10px;
+	font-size: 22px;
+	font-weight: bold;
+    text-align: center;
+}
+.succ_p{
+	margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.succ_img{	
+	display: block;
+	margin: 10px auto;
+	width: 200px;
+	height: 110px;
+}
+.cj{
+	display: block;
+	margin: 10px auto;
+	margin-top: 10px;
+	font-size: 18px;
+	width: 100px;
+	line-height: 35px;
+	border-radius: 10px;
+	background-color:#58bc8d;
+}
