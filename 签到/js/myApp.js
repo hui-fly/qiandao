@@ -1,4 +1,5 @@
 var app = angular.module("myApp", []);
+//一个工具类
 var calUtil = {
     //当前日历显示的年份
     showYear: 2018,
@@ -7,7 +8,7 @@ var calUtil = {
     //当前日历显示的天数
     showDays: 1,
     eventName: "load",
-
+    //获取当前年月日
     setMonthAndDay: function() {
         switch (calUtil.eventName) {
             case "load":
@@ -40,6 +41,7 @@ var calUtil = {
         var dPrevDate = new Date(iYear, iMonth, 0);
         return dPrevDate.getDate();
     },
+	//渲染日历，一个七行七列的表格
     bulidCal: function(iYear, iMonth, signsList) {
         var aMonth = new Array();
         for (var i = 0; i < 7; i++) {
@@ -56,18 +58,18 @@ var calUtil = {
         var iDaysInMonth = calUtil.getDaysInmonth(iMonth, iYear); //这个月多少天
         var iVarDate = 1;
         var d, w;
-        aMonth[0][0] = "日";
+        aMonth[0][0] = "日";                  //第一行显示星期
         aMonth[0][1] = "一";
         aMonth[0][2] = "二";
         aMonth[0][3] = "三";
         aMonth[0][4] = "四";
         aMonth[0][5] = "五";
         aMonth[0][6] = "六";
-        for (d = iDayOfFirst; d < 7; d++) {
+        for (d = iDayOfFirst; d < 7; d++) {   //第二行
             aMonth[1][d] = iVarDate;
             iVarDate++;
         }
-        for (w = 2; w < 7; w++) {
+        for (w = 2; w < 7; w++) {            //第三到第七行
             for (d = 0; d < 7; d++) {
                 if (iVarDate <= iDaysInMonth) {
                     aMonth[w][d] = iVarDate;
@@ -76,7 +78,7 @@ var calUtil = {
             }
         }
         var date = new Array(7);
-        for (var i = 0; i < 7; i++) {
+        for (var i = 0; i < 7; i++) {      //二维对象数组data，记录签到状态
             date[i] = new Array(7);
         }
         for (var i = 0; i < 7; i++) {
@@ -118,7 +120,7 @@ app.controller("myCtrl", function($scope) {
         var day = current.getDate();
         var signList = { "signYear": year, "signMonth": month, "signDay": day };
         signsList.push(signList);
-        calUtil.setMonthAndDay();
+        calUtil.setMonthAndDay();                                                   //获取当前的年月日
         $scope.date = calUtil.bulidCal(calUtil.showYear, calUtil.showMonth, signsList);
         var dates = calUtil.bulidCal(calUtil.showYear, calUtil.showMonth, signsList);
         // console.log(month+"  "+year+" "+day);

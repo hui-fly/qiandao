@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
-    <script src="js/angular-1.6.9/angular.min.js"></script>
-    <script src="js/myApp.js"></script>
+    <script src="js/myApp2.js"></script>
     <script>
     </script>
     <title>angualrJs签到</title>
@@ -21,9 +20,9 @@
         </div>
         <div class="calendarContainer">
             <div class="title">
-                <button class="pre calendar_month_prev" ng-click="onPreClick()">上月</button>
+                <!--<button class="pre calendar_month_prev" ng-click="onPreClick()">上月</button>-->
                 <p class="now">{{showYear+"年"+showMonth+"月"}}</p>
-                <button class="next calendar_month_next" ng-click="onNextClick()">下月</button>
+                <!--<button class="next calendar_month_next" ng-click="onNextClick()">下月</button>-->
             </div>
             <table class="calendar">
                 <tr class="row" ng-repeat="x in date">
@@ -38,10 +37,11 @@
     <div class="bg"></div>
     <div class="sign" style="display: none;">
             <div class="succ">
-                <p class="success">签到成功</p>
-                <p class="succ_p">{{"您已连续签到"+count+"天"}}</p>
+                <p class="success">{{"今日"+day+"号"}}</p><br>
+				<p class="success">签到成功</P>
+                <p class="succ_p">{{"您本月已签到"+count+"天"}}</p>
                 <img class="succ_img" src="image/gift.png">
-                <button class="cj">去抽奖</button>
+                <!--<button class="cj">去抽奖</button>-->
             </div>
     </div>
     <script>
