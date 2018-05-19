@@ -41,7 +41,7 @@ var calUtil = {
         var dPrevDate = new Date(iYear, iMonth, 0);
         return dPrevDate.getDate();
     },
-	//渲染日历，一个七行七列的表格
+	//生成日历，一个七行七列的表格
     bulidCal: function(iYear, iMonth, signsList) {
         var aMonth = new Array();
         for (var i = 0; i < 7; i++) {
@@ -105,7 +105,6 @@ var calUtil = {
         return signed;
     },
 };
-
 app.controller("myCtrl", function($scope) {
     // { "signYear": "2018", "signMonth": "4", "signDay": "10" },
     //        { "signYear": "2018", "signMonth": "4", "signDay": "11" },
