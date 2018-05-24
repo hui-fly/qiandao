@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
-    <script src="js/myApp2.js"></script>
+    <script src="js/myApp3.js"></script>
     <script>
     </script>
     <title>angualrJs签到</title>
@@ -29,10 +29,11 @@
                     <td ng-repeat="y in x track by $index" class="{{y.signed}}">{{y.day}}</td>
                 </tr>
             </table>
+			<div class="btnContainer">
+                <button class="btn" ng-click="qiandao()" onClick = "signIn()" ng-disabled="clickable">马上签到</button>
+            </div>
         </div>
-        <div class="btnContainer">
-            <button class="btn" ng-click="qiandao()" onClick = "signIn()" ng-disabled="clickable">马上签到</button>
-        </div>
+        
     </div>
     <div class="bg"></div>
     <div class="sign" style="display: none;">
@@ -44,7 +45,10 @@
                 <!--<button class="cj">去抽奖</button>-->
             </div>
     </div>
-    <script>
+	<!--后台将数据初始化在input,浏览器不需再请求，直接加载即可-->
+	<input type = 'hidden' class = 'data' value = '0000000000111101000111001010100000000000000000000'/>
+	<input type = 'hidden' class = 'openId' value = '??????????'/>
+   <script>
     function signIn() {
     	$(".bg").fadeIn();
         $(".sign").fadeIn();
