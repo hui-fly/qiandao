@@ -3,21 +3,20 @@
     padding: 0px;
 }
 
+
 body {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    height: 820px;
     flex-direction: column;
     overflow: hidden;
 }
 .container{
 	z-index: 0;
+	height:100%;
 }
 
 .headImgContainer {}
 
 .headImg {
-
     display: block;
     width: 100%;
 }
@@ -25,7 +24,7 @@ body {
 .calendarContainer {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 100%;
     background-color: #faca34;
 }
 
@@ -56,15 +55,23 @@ body {
 }
 
 .calendar {
+	width:85%;
+	height:36%;
     text-align: center;
     margin: 0 auto;
+	padding:0;
+	border:0;
 }
 
+.row{
+	display:flex;
+	flex-direction:row;
+	height:14%;
+}
 .signedCalendarCell {
     display: inline-block;
     font-size: 22px;
-    width: 48px;
-    height: 40px;
+    width: 14%;
     line-height: 45px;
     border: 0.5px solid #faca34;
     background-color: #58bc8d;
@@ -75,8 +82,7 @@ body {
 .CalendarCell {
     display: inline-block;
     font-size: 22px;
-    width: 48px;
-    height: 40px;
+    width: 14%;
     line-height: 45px;
     border: 0.5px solid #faca34;
     background-color: #fff;
@@ -85,8 +91,7 @@ body {
 
 .btnContainer {
     text-align: center;
-    position: absolute;
-    bottom: 100px;
+    position: relative;
     width: 100%;
 }
 

@@ -125,11 +125,11 @@ _app = {
 //param示例
 var param = {
 	method:'get',
-	url:'https://www.baidu.com',
+	url:'http://localhost:8080/01demo.php/',
 	data:'',
 	success:function(res){
 		console.log('请求成功');
-        return res;
+         console.log(res);
 	},
 	error:function(msg){
 		console.log("网络可能出问题了");

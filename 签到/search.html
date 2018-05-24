@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>搜索栏</title>
+	<link rel="stylesheet" type="text/css" href="./css/search.css">
+</head>
+<body>
+	<form class="container" action="http://localhost:8080/01demo.php/" method="get">
+        <select class="searchMethod">
+            <option>1</option>
+            <option>11</option>
+            <option>111</option>
+            <option>1111</option>
+        </select>
+        <input class="searchContent" list="browsers">
+            <datalist class="list" id="browsers">
+                <option>a</option>  
+                <option>b</option>
+                <option>c</option>
+                <option>d</option>
+            </datalist>
+        <input type="submit" class="search" value="搜索">
+	</form>
+</body>
+</html>
